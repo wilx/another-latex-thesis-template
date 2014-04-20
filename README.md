@@ -1,4 +1,3 @@
-another-latex-thesis-template
-=============================
+# another-latex-thesis-template
 
-Another LaTeX Thesis Template.
+Another LaTeX thesis template, for your master's/Ph.D. thesis or dissertation.
