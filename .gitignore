@@ -1,10 +1,11 @@
 # Copy this file to the Git repository and rename it ".gitignore".
 # Lines starting with '#' are treated as comments.
 
-# User scripts:
+# USER SCRIPTS AND NOTES:
 *.bat
+\!*
 
-# LaTeX temporary files:
+# LATEX TEMPORARY FILES:
 *.log
 *.aux
 *.bbl

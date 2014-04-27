@@ -4,20 +4,21 @@ Another LaTeX thesis template, for a master's or Ph.D. thesis or dissertation.
 
 ## Main Features
 
-* Simple design.
-* Consistent styling for figures and tables.
-* Consistent styling for mathematical theorems, definitions, lemmas, etc.
-* Template document contains numerous examples.
+- Simple template that can be further customized or extended.
+- Consistent style for figures and tables.
+- Consistent style for mathematical theorems, definitions, lemmas, etc.
+- Template document contains numerous examples.
 
 ## Overview
 
 The main LaTeX source file is `Thesis.tex`; the compiled document is `Thesis.pdf`.
-Instructions for compiling the document (TEX ---> DVI ---> PDF):
+
+Instructions for compiling the document (TEX &rarr; DVI &rarr; PDF):
 
 - **Method 1:** Use latexmk for fully automated document generation:
-`latexmk -e "$dvipdf='dvipdfm %O -o %D %S'" -pdfdvi "Thesis.tex"`
+	- `latexmk -e "$dvipdf='dvipdfm %O -o %D %S'" -pdfdvi "Thesis.tex"`
 
--**Method 2:** Use latex, bibtex, and dvipdfm manually:
+- **Method 2:** Use latex, bibtex, and dvipdfm manually:
 	- `latex "Thesis.tex"`
 	- `bibtex "Thesis"`
 	- `latex "Thesis.tex"` (run multiple times to resolve cross-references)

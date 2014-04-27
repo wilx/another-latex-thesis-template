@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ANOTHER LATEX THESIS TEMPLATE.
+%% https://github.com/zachscrivena/another-latex-thesis-template
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("Thesis.tex")
+%% TEX ---> DVI ---> PDF.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Method 1: Use latexmk for fully automated document generation:
+%   latexmk -e "$dvipdf='dvipdfm %O -o %D %S'" -pdfdvi "Thesis.tex"
+%
+% Method 2: Use latex, bibtex, and dvipdfm manually:
+%   latex "Thesis.tex"
+%   bibtex "Thesis"
+%   latex "Thesis.tex" (run multiple times to resolve cross-references)
+%   dvipdfm "Thesis.dvi"
+
+\documentclass[oneside,letterpaper,11pt]{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Thesis-Preamble.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Use Roman numerals (i, ii, iii, etc.) for page numbers.
+\pagenumbering{roman}
+
+\input{Thesis-FrontMatter.tex}
+
+% Use Arabic numerals (1, 2, 3, etc.) for page numbers.
+\pagenumbering{arabic}
+
+\input{Thesis-Chapter-Intro.tex}
+
+\input{Thesis-Chapter-ChapAbbr.tex}
+
+\input{Thesis-Chapter-Summary.tex}
+
+\input{Thesis-BackMatter.tex}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% QUICK REFERENCE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Font sizes:
+% normalsize, small, footnotesize, scriptsize, tiny
+% normalsize, large, Large, LARGE, huge, Huge
+
+% Math delimiter sizes:
+% big, Big, bigg, Bigg
+
+% Stacked math expressions:
+% \substack{a\\b\\c}
