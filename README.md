@@ -4,16 +4,16 @@ Another LaTeX thesis template, for a master's or Ph.D. thesis or dissertation.
 
 **Compiled document: [Thesis.pdf](./Thesis.pdf?raw=true)**
 
-**Sample pages (low-resolution screenshots):**
+**Sample pages (click to enlarge):**
 
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-01.png?raw=true" alt="Screenshot 01">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-02.png?raw=true" alt="Screenshot 02">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-03.png?raw=true" alt="Screenshot 03">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-04.png?raw=true" alt="Screenshot 04">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-05.png?raw=true" alt="Screenshot 05">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-06.png?raw=true" alt="Screenshot 06">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-07.png?raw=true" alt="Screenshot 07">
-<img style="margin:2px;border:1px solid black;" height="200" src="./Miscellaneous/Screenshot-08.png?raw=true" alt="Screenshot 08">
+<img height="225" src="./Miscellaneous/Screenshot-01.png?raw=true" alt="Screenshot 01">
+<img height="225" src="./Miscellaneous/Screenshot-02.png?raw=true" alt="Screenshot 02">
+<img height="225" src="./Miscellaneous/Screenshot-03.png?raw=true" alt="Screenshot 03">
+<img height="225" src="./Miscellaneous/Screenshot-04.png?raw=true" alt="Screenshot 04">
+<img height="225" src="./Miscellaneous/Screenshot-05.png?raw=true" alt="Screenshot 05">
+<img height="225" src="./Miscellaneous/Screenshot-06.png?raw=true" alt="Screenshot 06">
+<img height="225" src="./Miscellaneous/Screenshot-07.png?raw=true" alt="Screenshot 07">
+<img height="225" src="./Miscellaneous/Screenshot-08.png?raw=true" alt="Screenshot 08">
 
 ## Main Features
 
