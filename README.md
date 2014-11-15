@@ -2,18 +2,18 @@
 
 Another LaTeX thesis template, for a master's or Ph.D. thesis or dissertation.
 
-**Compiled document: [Thesis.pdf](./Thesis.pdf?raw=true)**
+**Compiled document: [Thesis.pdf](https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Thesis.pdf)**
 
 **Sample pages (click to enlarge):**
 
-<img height="225" src="./Miscellaneous/Screenshot-01.png?raw=true" alt="Screenshot 01">
-<img height="225" src="./Miscellaneous/Screenshot-02.png?raw=true" alt="Screenshot 02">
-<img height="225" src="./Miscellaneous/Screenshot-03.png?raw=true" alt="Screenshot 03">
-<img height="225" src="./Miscellaneous/Screenshot-04.png?raw=true" alt="Screenshot 04">
-<img height="225" src="./Miscellaneous/Screenshot-05.png?raw=true" alt="Screenshot 05">
-<img height="225" src="./Miscellaneous/Screenshot-06.png?raw=true" alt="Screenshot 06">
-<img height="225" src="./Miscellaneous/Screenshot-07.png?raw=true" alt="Screenshot 07">
-<img height="225" src="./Miscellaneous/Screenshot-08.png?raw=true" alt="Screenshot 08">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-01.png" alt="Screenshot 01">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-02.png" alt="Screenshot 02">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-03.png" alt="Screenshot 03">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-04.png" alt="Screenshot 04">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-05.png" alt="Screenshot 05">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-06.png" alt="Screenshot 06">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-07.png" alt="Screenshot 07">
+<img height="225" src="https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Miscellaneous/Screenshot-08.png" alt="Screenshot 08">
 
 ## Main Features
 
