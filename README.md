@@ -1,8 +1,13 @@
-# another-latex-thesis-template
+another-latex-thesis-template
+=============================
 
-Another LaTeX thesis template, for a master's or Ph.D. thesis or dissertation.
+Template for a simple thesis or dissertation, for a Ph.D. or master's degree, in LaTeX.
 
-**Compiled document: [Thesis.pdf](https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Thesis.pdf)**
+**Online template on ShareLaTeX:**<br>
+<https://www.sharelatex.com/templates/thesis/simple-thesis-dissertation>
+
+**Compiled sample document:**<br>
+[Thesis.pdf](https://raw.githubusercontent.com/zachscrivena/another-latex-thesis-template/master/Thesis.pdf)
 
 **Sample pages (click to enlarge):**
 
