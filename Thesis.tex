@@ -20,6 +20,7 @@
 %   dvipdfm "Thesis.dvi"
 
 \documentclass[oneside,letterpaper,11pt]{report}
+% \documentclass[oneside,a4paper,11pt]{report}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% TYPESETTING OPTIONS.
@@ -33,6 +34,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{Thesis-Preamble.tex}
+
+% PDF settings and properties (for "hyperref" package).
+\hypersetup{
+pdftitle={Insert Thesis Title Here},
+pdfauthor={Insert Author Name Here},
+pdfsubject={Ph.D. Thesis, University Institute of College, 2014},
+pdfcreator={LaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks,
+bookmarksnumbered}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ACTUAL DOCUMENT.
