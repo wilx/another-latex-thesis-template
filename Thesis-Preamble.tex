@@ -10,9 +10,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Run LaTeX in non-stop mode.
-\ifnum\TypesetInNonStopMode=1
-\nonstopmode
-\fi
+%\ifnum\TypesetInNonStopMode=1
+%\nonstopmode
+%\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PAGE SIZE AND MARGINS.
@@ -21,17 +21,58 @@
 % Letter-size (8.5in x 11in) single-sided pages,
 % with margins (top,right,bottom,left) = (1,1,1,1.5)in,
 % and header 0.25in above the text body.
-\usepackage[
-total={6in,9in},
-top=1in,
-left=1.5in,
-headsep=0.25in]{geometry}
+% \usepackage[
+% total={6in,9in},
+% top=1in,
+% left=1.5in,
+% headsep=0.25in]{geometry}
+\usepackage[paper=A4,oneside,DIV=calc,BCOR=5mm]{typearea}
+\usepackage[fontsize=13pt]{scrextend}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FONTS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{amssymb,amsmath}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{lmodern} % For Latin Modern fonts.
+\usepackage{times} % For Times fonts.
+%\usepackage{tgtermes}
+% Sans-serif fonts.
+\usepackage[scaled=0.89]{helvet}
+\renewcommand{\sffamily}{\usefont{T5}{phv}{m}{n}}
+\newcommand{\UseLMSSBoldFont}{\usefont{T5}{lmss}{m}{n}\bfseries}
+
+% Monospace (typewriter) font.
+\usepackage[scaled=0.78]{beramono}
+\renewcommand{\ttfamily}{\usefont{T5}{fvm}{m}{n}}
+
+\else % if luatex or xelatex
+\ifxetex
+\usepackage{mathspec}
+\else
+\usepackage{fontspec}
+\fi
+\usepackage{unicode-math}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+%\setmainfont{TeX Gyre Termes}
+\setmainfont{Times New Roman}
+\setmonofont{TeX Gyre Cursor}
+% \setsansfont{TeX Gyre Heros}
+\setsansfont{Arial}
+\setmathfont{XITS Math}
+\newcommand{\UseLMSSBoldFont}{\sffamily\bfseries}
+\fi
+\usepackage{microtype}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% MISCELLANEOUS PACKAGES.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[english]{babel} % For language-specific hyphenation.
+\usepackage[vietnamese]{babel} % For language-specific hyphenation.
 \usepackage{cite} % Automatically sort and range citations numbers.
 \usepackage{environ} % For easy definition of environments.
 \usepackage{rotating} % For rotating objects.
@@ -42,25 +83,9 @@ headsep=0.25in]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % PDF settings and properties (set options with \hypersetup{}).
-\usepackage[dvipdfm]{hyperref} % For TEX --> DVI --> PDF.
+\usepackage{hyperref} % For TEX --> DVI --> PDF.
 % \usepackage[pdftex]{hyperref} % For TEX --> PDF.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% FONTS.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[T1]{fontenc}
-\usepackage{lmodern} % For Latin Modern fonts.
-\usepackage{times} % For Times fonts.
-
-% Sans-serif fonts.
-\usepackage[scaled=0.89]{helvet}
-\renewcommand{\sffamily}{\usefont{T1}{phv}{m}{n}}
-\newcommand{\UseLMSSBoldFont}{\usefont{T1}{lmss}{m}{n}\bfseries}
-
-% Monospace (typewriter) font.
-\usepackage[scaled=0.78]{beramono}
-\renewcommand{\ttfamily}{\usefont{T1}{fvm}{m}{n}}
+\usepackage{bookmark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTION HEADINGS.
@@ -80,9 +105,9 @@ headsep=0.25in]{geometry}
 % Line spacing.
 \usepackage{setspace}
 %\singlespacing
-%\onehalfspacing
+\onehalfspacing
 %\doublespacing
-\setstretch{1.6} % custom
+%\setstretch{1.6} % custom
 
 % Paragraph indentation:
 % Indent first line of all paragraphs (including the first),
@@ -253,12 +278,15 @@ headsep=0.25in]{geometry}
 \usepackage{amsmath,amsfonts,amsbsy,amssymb,amsthm} % AMS packages.
 
 % Indicator function "1[.]" symbol.
-% Option 1: Use "\mathbf"
-%\newcommand{\one}[1]{{\mathbf{1}\left[#1\right]}}
 % Option 2: Use "bbold" package (install "bbold-type1" first)
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
 \DeclareSymbolFont{bbold}{U}{bbold}{m}{n}
 \DeclareSymbolFontAlphabet{\mathbbold}{bbold}
 \newcommand{\one}[1]{{\mathbbold{1}\left[#1\right]}}
+% Option 2: Use "\mathbf"
+\else
+\newcommand{\one}[1]{{\mathbf{1}\left[#1\right]}}
+\fi
 % Option 3: Use "dsfont" package
 %\usepackage{dsfont}
 %\newcommand{\one}[1]{{\mathds{1}\left[#1\right]}}
