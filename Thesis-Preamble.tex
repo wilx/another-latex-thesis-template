@@ -15,6 +15,13 @@
 %\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PDF OUTPUT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PDF settings and properties (set options with \hypersetup{}).
+\usepackage[bookmarks=true,unicode]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PAGE SIZE AND MARGINS.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,7 +33,7 @@
 % top=1in,
 % left=1.5in,
 % headsep=0.25in]{geometry}
-\usepackage[paper=A4,oneside,DIV=calc,BCOR=5mm]{typearea}
+\usepackage[paper=A4,oneside,DIV=calc,BCOR=5mm,headheight=20pt,footheight=20pt]{typearea}
 \usepackage[fontsize=13pt]{scrextend}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,13 +64,13 @@
 \usepackage{fontspec}
 \fi
 \usepackage{unicode-math}
-\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-%\setmainfont{TeX Gyre Termes}
-\setmainfont{Times New Roman}
-\setmonofont{TeX Gyre Cursor}
-% \setsansfont{TeX Gyre Heros}
-\setsansfont{Arial}
-\setmathfont{XITS Math}
+%\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\setmainfont[Ligatures={TeX,Common},Scale=MatchLowercase]{TeX Gyre Termes}
+%\setmainfont[Ligatures=TeX,Scale=MatchLowercase]{Times New Roman}
+\setmonofont[Scale=MatchLowercase]{TeX Gyre Cursor}
+\setsansfont[Ligatures={TeX,Common},Scale=MatchLowercase]{TeX Gyre Heros}
+%\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Arial}
+\setmathfont[Scale=MatchLowercase]{XITS Math}
 \newcommand{\UseLMSSBoldFont}{\sffamily\bfseries}
 \fi
 \usepackage{microtype}
@@ -77,15 +84,7 @@
 \usepackage{environ} % For easy definition of environments.
 \usepackage{rotating} % For rotating objects.
 \usepackage{framed} % For framed text.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PDF OUTPUT.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% PDF settings and properties (set options with \hypersetup{}).
-\usepackage{hyperref} % For TEX --> DVI --> PDF.
-% \usepackage[pdftex]{hyperref} % For TEX --> PDF.
-\usepackage{bookmark}
+\usepackage{ifdraft}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SECTION HEADINGS.
@@ -124,33 +123,14 @@
 %% HEADERS AND FOOTERS.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Header.
-\newcommand{\HeaderText}{\hfill\footnotesize\sffamily\thepage\hfill}
-
-% Footer.
-\ifnum\TypesetInDraftMode=1
-\newcommand{\FooterText}{\hfill\footnotesize\sffamily\color{red}{DRAFT}~\Timestamp\hfill}
+\usepackage{scrlayer-scrpage}
+\ifnum\TypesetInDraftMode=1%
+  \chead{\footnotesize\sffamily\color{red}{DRAFT}~\Timestamp}
 \fi
-
-\ifnum\TypesetInDraftMode=0
-\newcommand{\FooterText}{}
-\fi
-
-\makeatletter
-\def\ps@plain{%
-\def\@oddhead{\HeaderText}%
-\def\@evenhead{\HeaderText}%
-\def\@oddfoot{\FooterText}%
-\def\@evenfoot{\FooterText}}
-
-\makeatletter
-\def\ps@empty{%
-\def\@oddhead{}%
-\def\@evenhead{}%
-\def\@oddfoot{\FooterText}%
-\def\@evenfoot{\FooterText}}
-
-\pagestyle{plain}
+\cfoot{\thepage}
+\ohead{}
+\ihead{}
+\pagestyle{scrheadings}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% FOOTNOTES.

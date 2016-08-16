@@ -19,7 +19,7 @@
 %   latex "Thesis.tex" (run multiple times to resolve cross-references)
 %   dvipdfm "Thesis.dvi"
 
-\documentclass[oneside]{report}
+\documentclass[]{report}
 % \documentclass[oneside,a4paper,11pt]{report}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,20 +38,20 @@
 % PDF settings and properties (for "hyperref" package).
 \hypersetup{
 pdftitle={Insert Thesis Title Here},
-pdfauthor={Insert Author Name Here},
+pdfauthor={Nguyễn Thị Minh Châu},
 pdfsubject={Ph.D. Thesis, University Institute of College, 2014},
-pdfcreator={LaTeX},
-pdfproducer={},
+%pdfcreator={LaTeX},
+%pdfproducer={},
 pdfkeywords={},
 pdfpagemode={},
-bookmarks=true,
+bookmarksnumbered,
 bookmarksopen=true,
 pdfstartview=FitH,
 pdfpagelayout=OneColumn,
 pdfpagemode=UseOutlines,
 hidelinks,
-breaklinks,
-bookmarksnumbered}
+breaklinks}
+\usepackage{bookmark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ACTUAL DOCUMENT.
